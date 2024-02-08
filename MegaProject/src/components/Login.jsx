@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import { login as authLogin } from '../store/authSlice'
-import {Button, Input, Logoo} from "./index"
+import {Button, Input, Logo} from "./index"
 import {useDispatch} from "react-redux"
 import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
@@ -21,8 +21,6 @@ function Login() {
                 if(userData) dispatch(authLogin(userData));
                 navigate("/")
             }
-            // Link se click krne pr ab redirect ho jata h or Navigate ka use krke promgramitically redirect ho jata h
-        
         } catch (error) {
             setError(error.message)
         }
@@ -35,7 +33,7 @@ function Login() {
         <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
         <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logoo width="100%" />
+                        <Logo width="100%" />
                     </span>
         </div>
         <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
@@ -58,7 +56,6 @@ function Login() {
                 {...register("email", {
                     required: true,
                     validate: {
-                        //email validation using regexp
                         matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                         "Email address must be a valid address",
                     }

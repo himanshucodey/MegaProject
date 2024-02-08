@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Logoo, LogoutBtn} from '../index'
+import {Container, Logo, LogoutBtn} from '../index'
 import { Link } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -43,7 +43,7 @@ function Header() {
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>
-              <Logoo width='70px'   />
+              <Logo width='70px'   />
 
               </Link>
           </div>
@@ -58,9 +58,7 @@ function Header() {
               </li>
             ) : null
             )}
-            
             {authStatus && (
-              //Logoutbtn will show according to authStatus
               <li>
                 <LogoutBtn />
               </li>

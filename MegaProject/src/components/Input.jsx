@@ -1,6 +1,6 @@
 import React, {useId} from 'react'
 
-const Input = ( function Input({
+const Input = React.forwardRef( function Input({
     label,
     type = "text",
     className = "",
@@ -8,7 +8,6 @@ const Input = ( function Input({
 }, ref){
     const id = useId()
     return (
-        //if label h tbhi label show hoga
         <div className='w-full'>
             {label && <label 
             className='inline-block mb-1 pl-1' 
@@ -22,9 +21,9 @@ const Input = ( function Input({
             ref={ref}
             {...props}
             id={id}
-            />fr
+            />
         </div>
     )
 })
 
-export default React.forwardRef(Input)
+export default Input

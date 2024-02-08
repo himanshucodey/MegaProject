@@ -19,8 +19,6 @@ function EditPost() {
             navigate('/')
         }
     }, [slug, navigate])
-    // return post ? () :null
-    //post h to return kro vrna null return krdo
   return post ? (
     <div className='py-8'>
         <Container>
