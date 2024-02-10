@@ -14,7 +14,7 @@ function Footer() {
                             </div>
                             <div>
                                 <p className="text-sm text-gray-600">
-                                    &copy; Copyright 2023. All Rights Reserved by DevUI.
+                                    &copy; Copyright 2023. All Rights Reserved by Himanshu.
                                 </p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ function Footer() {
                                         className=" text-base font-medium text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
-                                        Press Kit
+                                        User guide
                                     </Link>
                                 </li>
                             </ul>
